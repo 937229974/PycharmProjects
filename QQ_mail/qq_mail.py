@@ -1,0 +1,28 @@
+# -*- coding:utf-8 -*-
+import requests
+
+def login():
+    # cookie_jar = cookiejar.CookieJar()
+    # handler = request.HTTPCookieProcessor(cookie_jar)
+    # opener = request.build_opener(handler)
+
+    header={
+        ':authority': 'ty.captcha.qq.com',
+        ':method': 'GET',
+        ':path': ':path: /code?Action=WebInfo&siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&content=QhKfoC1pfz%2BpNtTWjno0oGoXRI0xYtLlpr6HXKCiIpuT8LLe1i%2BpRO%2B3oiqlwnQ1DyM%2B4AYpS41eZm2p3KqepHzt98Q9XGpd5Tnxi%2F87oAw92lhxqTuJMTRoWnL6%2Fb5NzmfVJJi4C0WI5ObSxp%2FnNgnRts9tGWjOf5lXL4ZBGgi4Au2nt5kA25sGdAE62szKVNysCWURrSwgmtwOazlW547ZMdRDNRSwRsJRVtSZdKbO0n8IjrlRmJ4e4tf%2BXtu31B4%2F75OvXRlMyA1pq4o32JNeAykW6GcFWZFXVVLQAkvE82bGReaDDvQu1MtfULxS32FqlZ%2BzYX2fzLhAwqUgCHbAAIZTUVvGmTBY%2B9of09Z4Lyt7sMIg4WrJpYe0bdrXAAYts5WoTBR9bgLLc%2FK7yUGvYCxl0QHuENoE6IstUFRir51YsxS%2F86u9cNk25eKLkgxLOBdcFa6wgpFfbtU0KxFXiXZ4EaGfewc%2FD%2BluYjFpKXC4Y7ByKNyy%2BO62e1Jom8MfjlMgjIdNRjpELrOASS0JnugvhywPOfRkKtUr9czvZdOG91trSKbCDYakFCTAsKNxivTvct0zseRqgFwwpJfgNeqHBAYQOORY7xBGaoUo6WsJK%2BHRru7syHu1wR%2Bo2ZnEFKeFFsD%2FHH5pJnXji%2Br9dRwe%2F4dBQO%2Bu69rMtgw7S66qGrJ%2F3nFHrtrqLfQsnUvuddv%2FnMiUobvCTk5n7Uv44O8stRZlewiEIx%2BIajOqJA9xAk3VpxxlbMeiNfWqYNd%2BHD3YkmtcQZ97mX4NeaTcRDRP3%2FOjEaXQjXf9lgRzCRlF5U2M6bB4MdcWsiHhTugULijT3ICijJ95G2IQ1HWUd%2BvWwggfb7Szrj4qEcxxdKuOMKSsiNqcQElDitnP7FJSJAh%2BTExyKFvVbV2StBYHzcp2O7CkuOVAB%2FcvhSF%2Fn4KNLuNh8hANF%2F0TSTeu7hRb01mK%2BJCuF50brhk2pGsQ%2B02ia9x6OJYXeguV%2BlYFBT7TfxVWE8DIX7w8%2FGPYPqxGWTlMW4cYx2%2BUoEHRMxwY9EJMi0R0e9y4q0y%2BluKobpmwK0rPrlW5r4L21VBmIQ1uQi0Rml%2Bqwbct41JF85wASfu2BrQAJfB2YRzy34U%2Fz2micC0Shl%2BMSHJg0t8G',
+        ':scheme': 'https',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'user-agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+        'cookie': 'pgv_pvi=9659355136; RK=iNz9+of0Sr; ptcz=abc97a22e4fbb79347f42fa51193bde26163112c5f0add42fd5d0540c1f2a4fd; pgv_pvid=1130404310; tvfe_boss_uuid=c11713b1d7d3b4ab; o_cookie=937229974; eas_sid=C1R52309V2b3A1p6y0h0r337Z0; luin=o0937229974; pt2gguin=o0937229974; LW_sid=P1N5G4y0f0v145V019S3f9S0l8; LW_uid=71F5d4X0L0b1C5Z0u903k9P0v9; ptui_loginuin=937229974; lskey=000100002a94802a451a325d68fded92467a4b5cdc5c218ab6d4bcc35e1f6efd1e031a2f947a2f7705418ba5; _qpsvr_localtk=1540288501825; pgv_si=s1284388864; ptisp=ctc',
+        'referer': 'referer: https://xui.ptlogin2.qq.com/cgi-bin/xlogin?target=self&appid=522005705&daid=4&s_url=https://mail.qq.com/cgi-bin/readtemplate?check=false%26t=loginpage_new_jump%26vt=passport%26vm=wpt%26ft=loginpage%26target=&style=25&low_login=1&proxy_url=https://mail.qq.com/proxy.html&need_qr=0&hide_border=1&border_radius=0&self_regurl=http://zc.qq.com/chs/index.html?type=1&app_id=11005?t=regist&pt_feedback_link=http://support.qq.com/discuss/350_1.shtml&css=https://res.mail.qq.com/zh_CN/htmledition/style/ptlogin_input24e6b9.css',
+    }
+    url ='https://ty.captcha.qq.com/code?Action=WebInfo&siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&content=QhKfoC1pfz%2BpNtTWjno0oGoXRI0xYtLlpr6HXKCiIpuT8LLe1i%2BpRO%2B3oiqlwnQ1DyM%2B4AYpS41eZm2p3KqepHzt98Q9XGpd5Tnxi%2F87oAw92lhxqTuJMTRoWnL6%2Fb5NzmfVJJi4C0WI5ObSxp%2FnNgnRts9tGWjOf5lXL4ZBGgi4Au2nt5kA25sGdAE62szKVNysCWURrSwgmtwOazlW547ZMdRDNRSwRsJRVtSZdKbO0n8IjrlRmJ4e4tf%2BXtu31B4%2F75OvXRlMyA1pq4o32JNeAykW6GcFWZFXVVLQAkvE82bGReaDDvQu1MtfULxS32FqlZ%2BzYX2fzLhAwqUgCHbAAIZTUVvGmTBY%2B9of09Z4Lyt7sMIg4WrJpYe0bdrXAAYts5WoTBR9bgLLc%2FK7yUGvYCxl0QHuENoE6IstUFRir51YsxS%2F86u9cNk25eKLkgxLOBdcFa6wgpFfbtU0KxFXiXZ4EaGfewc%2FD%2BluYjFpKXC4Y7ByKNyy%2BO62e1Jom8MfjlMgjIdNRjpELrOASS0JnugvhywPOfRkKtUr9czvZdOG91trSKbCDYakFCTAsKNxivTvct0zseRqgFwwpJfgNeqHBAYQOORY7xBGaoUo6WsJK%2BHRru7syHu1wR%2Bo2ZnEFKeFFsD%2FHH5pJnXji%2Br9dRwe%2F4dBQO%2Bu69rMtgw7S66qGrJ%2F3nFHrtrqLfQsnUvuddv%2FnMiUobvCTk5n7Uv44O8stRZlewiEIx%2BIajOqJA9xAk3VpxxlbMeiNfWqYNd%2BHD3YkmtcQZ97mX4NeaTcRDRP3%2FOjEaXQjXf9lgRzCRlF5U2M6bB4MdcWsiHhTugULijT3ICijJ95G2IQ1HWUd%2BvWwggfb7Szrj4qEcxxdKuOMKSsiNqcQElDitnP7FJSJAh%2BTExyKFvVbV2StBYHzcp2O7CkuOVAB%2FcvhSF%2Fn4KNLuNh8hANF%2F0TSTeu7hRb01mK%2BJCuF50brhk2pGsQ%2B02ia9x6OJYXeguV%2BlYFBT7TfxVWE8DIX7w8%2FGPYPqxGWTlMW4cYx2%2BUoEHRMxwY9EJMi0R0e9y4q0y%2BluKobpmwK0rPrlW5r4L21VBmIQ1uQi0Rml%2Bqwbct41JF85wASfu2BrQAJfB2YRzy34U%2Fz2micC0Shl%2BMSHJg0t8G'
+    respon = requests.get(url ,header)
+    print(respon.text)
+    res = requests.get(url='https://ui.ptlogin2.qq.com/cgi-bin/report?ct=2&path=0-0-0-0-0-0')
+    print(res)
+    sq = requests.get('https://ssl.ptlogin2.qq.com/login?u=937229974&verifycode=!UEL&pt_vcode_v1=0&pt_verifysession_v1=f926b018084d8ad795d9ac6b1c20ad3fe69b0cb85cf5b05cae205b90b1f2f602963b0af5772b746baf4a930da0f35ca7b7475e64c8344ff2&p=z18su7d135ALNR*l5kBMb2U1DZsO2zWlaDXTeXb6907jEmcZr22jJV-tvVvpV4iHOkadoGllVyZKrn4lGWPUL8VC7jhLDAGY*UeUL6lM5FXzJLdJAWRaZnyOyH1iMHmfUeUE*Q2KMJHo4WxyHFE4w0BCDCjdZxz6ARQZi4ZH3LASTAomTWCrtDEpd9JiHsDYP2RwTARhkq1LtjYg3h3BcRtttNgMWfSaVXjYEOTi3erp95J3htL1spqBQabvG0*OJpKxh2UJLR1QQRo4XoRkFd93mGOIcU--JT-LsE3Xojqu4WR6gqjCj200ERhPLmepClz7VKcXXrNdoZqE6IZnHQ__&pt_randsalt=2&pt_jstoken=18839319&u1=https%3A%2F%2Fmail.qq.com%2Fcgi-bin%2Freadtemplate%3Fcheck%3Dfalse%26t%3Dloginpage_new_jump%26vt%3Dpassport%26vm%3Dwpt%26ft%3Dloginpage%26target%3D%26account%3D937229974&ptredirect=0&h=1&t=1&g=1&from_ui=1&ptlang=2052&action=1-30-1540348832820&js_ver=10284&js_type=1&login_sig=THBeqQbMSGAMT5dbYgVqfaKaF3j6CkuNApaCP9Vg2XB3Ca0V8GqaeAn410PXfGrs&pt_uistyle=25&aid=522005705&daid=4&')
+    print(sq.text)
+login()
